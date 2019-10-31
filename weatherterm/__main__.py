@@ -16,6 +16,8 @@ def _validate_forecast_args(args):
         sys.exit()
 
 
+forecastchoice = ['td','--today','-5d','--fivedays','-10d','--tendays','-w','--weekend']
+
 parsers = parser_loader.load('./weatherterm/parsers')
 
 argparser = ArgumentParser(

@@ -1,14 +1,13 @@
-from core.unit import Unit
+from weatherterm.core.unit import Unit
 
 
 class UnitConverter:
     def __init__(self, parser_default_unit, dest_unit =None):
         self._parser_default_unit = parser_default_unit
         self.dest_unit = dest_unit
-
         self._convert_functions = {
             Unit.CELCIUS: self._to_celcius,
-            Unit.FAHRENHEIT: self._to_fahrenheit,
+            Unit.FAHRENHEIT: self._to_fahrenheit
         }
     @property
     def dest_unit(self):
@@ -37,7 +36,7 @@ class UnitConverter:
     def _format_results(self, value):
         return int(value) if value.is_integer() else f'{value:.1f}'
 
-    def _to_celsius(self, fahrenheit_temp):
+    def _to_celcius(self, fahrenheit_temp):
         result = (fahrenheit_temp - 32) * 5 / 9
         return result
 

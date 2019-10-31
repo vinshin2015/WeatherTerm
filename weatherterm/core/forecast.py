@@ -1,6 +1,6 @@
 from datetime import date
 
-from core.forecast_type import ForecastType
+from weatherterm.core.forecast_type import ForecastType
 
 
 class Forecast:

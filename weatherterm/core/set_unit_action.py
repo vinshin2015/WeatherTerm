@@ -1,4 +1,4 @@
-from argparse import ArgumentParser
+from argparse import Action
 
 from weatherterm.core import Unit
 
